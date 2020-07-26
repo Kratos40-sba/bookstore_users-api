@@ -2,6 +2,7 @@ package users
 
 import (
 	"fmt"
+	"github.com/kratos40-sba/bookstore_users-api/utils/date_utils"
 	"github.com/kratos40-sba/bookstore_users-api/utils/errors"
 )
 
@@ -26,6 +27,7 @@ func (user *User)Save()*errors.RestErr{
 	if currentUser != nil {
 		return errors.NewBadRequest(fmt.Sprintf("user of the id %d already exists",user.Id))
 	}
+	user.DateCreated = date_utils.GetNowString()
 	userDB[user.Id] = user
 	return nil
 }

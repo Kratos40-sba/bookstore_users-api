@@ -1,7 +1,7 @@
 package app
 
 import (
-	"github.com/kratos40-sba/bookstore_users-api/controllers/ping"
+
 	"github.com/kratos40-sba/bookstore_users-api/controllers/user"
 )
 
