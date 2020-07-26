@@ -12,7 +12,7 @@ var (
 func (user *User) Get() *errors.RestErr{
 	userFound := userDB[user.Id]
 	if userFound == nil {
-       return errors.NewNotFoundError(fmt.Sprintf("user of the id %d not found \n",user.Id ))
+       return errors.NewNotFoundError(fmt.Sprintf("user of the id %d not found ",user.Id ))
 	}
 	user.Id = userFound.Id
 	user.FirstName = userFound.FirstName

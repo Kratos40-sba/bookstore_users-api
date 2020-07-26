@@ -22,9 +22,10 @@ func GetUser(c *gin.Context){
 		c.JSON(getErr.Status, getErr)
 		return
 		//log.Fatal(saveErr) }
-		c.JSON(http.StatusOK, result)
+
 	//c.String(http.StatusNotImplemented,"not yet implemented \n")
     }
+	c.JSON(http.StatusOK, result)
 }
 func CreateUser(c *gin.Context) {
 	var user users.User
@@ -47,9 +48,10 @@ func CreateUser(c *gin.Context) {
 		c.JSON(saveErr.Status, saveErr)
 		return
 		//log.Fatal(saveErr) }
-		c.JSON(http.StatusCreated, result)
+
 
 	}
+	c.JSON(http.StatusCreated, result)
 }
 func FindUser(c *gin.Context){
 	c.String(http.StatusNotImplemented,"not yet implemented \n")
